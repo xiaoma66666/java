@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 计算N个两位随机整数的和</title>  <!-- （0.5分） -->
+</head>
+<body>
+<h4>计算N个两位随机整数的和</h4>  <!-- （0.5分） -->
+<script type="text/javascript">
+      var n=parseInt(prompt("请输入一个不小于10的整数",10));
+      document.write("随机产生的两位整数分别是："); // （0.5分）
+	  var int_number=new Array();//定义数组用于保存随机产生的整数
+     // 循环结构（1分）
+	   for(var i=0,sum=0;i<n;i++)
+        {
+			int_number[i]=Math.floor(Math.random()*90+10); //（1分）
+	        sum=sum+int_number[i];             //（1分）
+		    document.write(int_number[i]+" ");  //（0.5分）
+        }
+		document.write("<br>"+n+"位随机两位整数累加和="+sum);  //（1分）
+   </script>
+</body>
+</html>
